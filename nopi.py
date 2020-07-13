@@ -20,7 +20,7 @@ latest_url = 'https://api.municode.com/Jobs/latest/10040'
 
 # Table of contents side banner
 # The Ids are the calls that can be made through CodesContent
-toc_url = https://api.municode.com/codesToc?jobId=360878&productId=10040
+toc_url = 'https://api.municode.com/codesToc?jobId=360878&productId=10040'
 
 '''
 https://api.municode.com/CodesContent?jobId=360878&nodeId=CD_NEW_ORLEANS_LOUISIANA&productId=10040
@@ -31,7 +31,7 @@ https://api.municode.com/CodesChangedDocs?jobId=360878&productId=10040
 
 
 #Munidocs
-munidocs_url = https://api.municode.com/Products/name?clientId=3524&productName=munidocs
+munidocs_url = 'https://api.municode.com/Products/name?clientId=3524&productName=munidocs'
 
 '''
 https://api.municode.com/munidocsToc?productId=30001
@@ -39,8 +39,12 @@ https://api.municode.com/MunidocsContent?isAdvancedSearch=false&productId=30001&
 '''
 
 #minutes
-minutes_url = https://api.municode.com/MunidocsContent?isAdvancedSearch=false&nodeId=minutes&productId=30001&searchText=
+minutes_url = 'https://api.municode.com/MunidocsContent?isAdvancedSearch=false&nodeId=minutes&productId=30001&searchText='
 
+def all_urls():
+    urls = {
+                'code_changed':'https://api.municode.com/CodesChangedDocs?jobId=360878&productId=10040',
+            }
 
 def get_toc():
     toc_response = requests.get(toc_url)
@@ -50,3 +54,7 @@ def get_toc():
     for i in range(len(toc['Children'])):
         toc_list.append(toc['Children'][i]['Id'])
     return(toc_list)
+
+
+def get_code_change():
+    https://api.municode.com/CodesChangedDocs?jobId=360878&productId=10040
