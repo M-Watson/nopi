@@ -55,6 +55,13 @@ def get_toc():
         toc_list.append(toc['Children'][i]['Id'])
     return(toc_list)
 
+def get_chapter(chapter):
+    url = "https://api.municode.com/CodesContent?jobId=360878&nodeId={}&productId=10040".format(chapter)
+    chapter_request = requests.get(url)
+    chapter_response = chapter_request.json()
+    return(chapter_response)
 
 def get_code_change():
-    https://api.municode.com/CodesChangedDocs?jobId=360878&productId=10040
+    url = 'https://api.municode.com/CodesChangedDocs?jobId=360878&productId=10040'
+    cc_request = requests.get(url)
+    cc_response = cc_request.json()
