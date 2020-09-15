@@ -11,13 +11,9 @@ import requests
 
 
 base_url = 'https://library.municode.com/la/new_orleans'
-
 info_url = 'https://api.municode.com/Products/name?clientId=3524&productName=code of ordinances'
-
 # The 10040 seems to show up in the info url under productid
 latest_url = 'https://api.municode.com/Jobs/latest/10040'
-
-
 # Table of contents side banner
 # The Ids are the calls that can be made through CodesContent
 toc_url = 'https://api.municode.com/codesToc?jobId=360878&productId=10040'

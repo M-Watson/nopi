@@ -1,12 +1,3 @@
-'''
-New Orleans Programming Interface (unofficial)
-
-'''
-
-
-import json
-import requests
-
 import pkgutil
 
 __all__ = []
